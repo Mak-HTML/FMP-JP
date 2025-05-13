@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>HTML / CSS Quiz</h1>
+
+    <!-- User Name Input Box -->
+    <div id="start-box">
+      <label for="username">Enter Your Name:</label><br>
+      <input type="text" id="username" placeholder="Your name" />
+      <br><br>
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Content -->
+    <div id="quiz-box" style="display: none;">
+      <div id="question-number">Question 1 of 10</div>
+      <div id="timer">Time Left: 0:30</div>
+
+      <div id="question">Question Text</div>
+
+      <form id="optionsForm"></form>
+
+      <button onclick="nextQuestion()" id="nextBtn" disabled>Next</button>
+    </div>
+
+    <!-- Result Section -->
+    <div id="result-box" style="display: none;">
+      <h2>Quiz Result</h2>
+      <p id="scoreText"></p>
+      <button onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+  
+  <!-- Quiz Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
