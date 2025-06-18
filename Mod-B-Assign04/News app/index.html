@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News App - NewsData.io</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">News App</h2>
+
+    <!-- Search Form -->
+    <form id="newsForm" class="form-inline justify-content-center mb-4">
+      <input type="text" id="searchInput" class="form-control mr-2" placeholder="Enter keyword (e.g. Karachi, Tesla)" required>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <!-- News Results -->
+    <div id="newsContainer" class="row"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
